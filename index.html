@@ -41,11 +41,15 @@ nav {
   right: 0;
   z-index: 100;
 
-  /* background: rgba(10,15,30,0.85); */
+  background: transparent;
   backdrop-filter: blur(12px);
-  /* border-bottom: 1px solid var(--border); */
+  transition: background 0.3s ease;
 }
 
+/* 👇 when scrolled */
+nav.scrolled {
+  background: rgba(10,15,30,0.85);
+}
 /* This controls spacing of content */
 .nav-container {
   max-width: 1200px;      /* controls content width */
@@ -1743,5 +1747,16 @@ font-size: clamp(18px, 3vw, 28px);
   <div class="footer-copy">© 2026 Dr. Vin Menon. All rights reserved.</div>
 </footer>
 
+<script>
+  window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+</script>
 </body>
 </html>
