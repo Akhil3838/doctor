@@ -379,6 +379,7 @@
 </div>  </div>
 </section>
 
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -427,36 +428,8 @@
   <div class="footer-copy">© 2026 Dr. Vin Menon. All rights reserved.</div>
 </footer>
 
-<script>
-  window.addEventListener("scroll", function () {
-    const nav = document.querySelector("nav");
 
-    if (window.scrollY > 50) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
-</script>
-
-<script>
-document.querySelectorAll('.dropdown-toggle').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-
-      const parent = this.parentElement;
-
-      // close other dropdowns (optional but clean UX)
-      document.querySelectorAll('.dropdown').forEach(d => {
-        if (d !== parent) d.classList.remove('active');
-      });
-
-      parent.classList.toggle('active');
-    }
-  });
-});
-</script>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

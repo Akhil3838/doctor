@@ -1443,7 +1443,7 @@ font-size: clamp(18px, 3vw, 28px);
     .nav-links {
       position: absolute;
       top: 100%; left: 0; right: 0;
-      background: rgba(10, 15, 30, 0.95);
+      background: rgba(10, 15, 30);
       border-top: 1px solid var(--border);
       margin: 0;
       padding: 0px 16px;
@@ -1464,7 +1464,7 @@ font-size: clamp(18px, 3vw, 28px);
     .nav-toggle-input:checked + .nav-toggle-label + .nav-links {
       max-height: 360px;
     }
-    .hero { padding: 104px 16px 40px; min-height: auto; }
+    .hero { padding: 104px 16px 0px; min-height: auto; }
     .hero-content h1 { font-size: 42px; }
     .hero-tags, .hero-roles, .hero-book { font-size: 12px; }
     .hero-img-wrap { width: 100%; max-width: 300px; height: 340px; margin: 0 auto; }
