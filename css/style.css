@@ -118,7 +118,7 @@ nav.scrolled {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 60px;
+    /* gap: 60px; */
   }
 
   .hero-content { position: relative; z-index: 2; }
@@ -2015,11 +2015,27 @@ ul, li {
 /* EVENT GRID */
 .event-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
+
+  max-width: 1200px;   /* 👈 controls total width */
+  margin: 0 auto;      /* 👈 center the grid */
+  padding: 20px;       /* 👈 left & right spacing */
+}
+/* Tablet */
+@media (max-width: 992px) {
+  .event-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* Mobile */
+@media (max-width: 576px) {
+  .event-gallery {
+    grid-template-columns: 1fr;
+      padding: 15px; /* smaller spacing on mobile */
+  }
+}
 /* CARD */
 .event-card {
   position: relative;
