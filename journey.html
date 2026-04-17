@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="/css/style.css" />
 
-
 </head>
 <body>
 
@@ -44,43 +43,70 @@
   </nav>
   <!-- HERO -->
   
-  <!-- ABOUT -->
-   <section style="padding-top: 30px;">
-       <h2 class="section-title" style=" margin-bottom: 2px;">Gallery</h2>
-                  <p style="text-align: center; margin-bottom: 2px;">
-    A curated selection of our favorite moments. Each photograph is a story, a captured instant of beauty and wonder.
-  </p>
-   </section>
-      <!-- GALLERY -->
   
-  <div class="event-gallery">
   
-    <!-- EVENT CARD -->
-    <div class="event-card" onclick="openModal('event1')">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" />
-      <div class="event-overlay">
-        <h3>Tech Summit 2025</h3>
-        <p>March 12, 2025</p>
+  <!-- Global Leadership & Entrepreneurial Journey -->
+  <!-- Global Leadership & Entrepreneurial Journey -->
+  <section class="container journey-section">
+    <div class="container">
+  
+      <h2 class="section-title">Global Leadership & Entrepreneurial Journey</h2>
+  
+      <!-- ITEM -->
+      <div class="journey-card">
+        <div class="journey-img">
+          <img src="https://drvinmenon.com/images/bamboo.png" alt="">
+        </div>
+  
+        <div class="journey-content">
+          <h4>Co-Founder & Strategic Advisor</h4>
+          <h5>MindWaveDAO</h5>
+          <p class="meta">Global | 2024 – Present</p>
+  
+          <p>
+            At MindWaveDAO, I focus on advancing decentralized investment strategies and ethical blockchain governance.
+          </p>
+  
+          <ul>
+            <li>Leading the conceptualization of Token, promoting financial inclusion, decentralization and impact-driven funding models.</li>
+            <li>Advising on DAO architecture, tokenomics and community governance.</li>
+            <li>Driving partnerships that align blockchain adoption with social good and environmental sustainability.</li>
+            <li>Supporting DeFi innovation through transparent and equitable frameworks under Web3 principles.</li>
+          </ul>
+        </div>
       </div>
+          <!-- ITEM -->
+  <div class="journey-card reverse">
+  
+    <div class="journey-img">
+      <img src="https://drvinmenon.com/images/bamboo.png" alt="">
     </div>
   
-    <div class="event-card" onclick="openModal('event2')">
-      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" />
-      <div class="event-overlay">
-        <h3>Global Meetup</h3>
-        <p>June 8, 2025</p>
-      </div>
-    </div>
+    <div class="journey-content">
+      <h4>Co-Founder & Strategic Advisor</h4>
+      <h5>MindWaveDAO</h5>
+      <p class="meta">Global | 2024 – Present</p>
   
-    <div class="event-card" onclick="openModal('event3')">
-      <img src="https://images.unsplash.com/photo-1511578314322-379afb476865" />
-      <div class="event-overlay">
-        <h3>Startup Expo</h3>
-        <p>Sept 21, 2025</p>
-      </div>
+      <p>
+        At MindWaveDAO, I focus on advancing decentralized investment strategies and ethical blockchain governance.
+      </p>
+  
+      <ul>
+        <li>Leading the conceptualization of Token...</li>
+        <li>Advising on DAO architecture...</li>
+        <li>Driving partnerships...</li>
+        <li>Supporting DeFi innovation...</li>
+      </ul>
     </div>
   
   </div>
+  
+  
+  
+  
+    </div>
+  </section>
+  
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
@@ -129,51 +155,6 @@
     <div class="footer-copy">© 2026 Dr. Vin Menon. All rights reserved.</div>
   </footer>
 </div style="padding-top: 80px;">
-
-<!-- MODAL -->
-<div id="eventModal" class="modal" style="margin-top: 50px;">
-  <span class="close" onclick="closeModal()">&times;</span>
-
-  <div class="modal-content" id="modalContent">
-    <!-- Images will come here dynamically -->
-  </div>
-</div>
-
-    <script>
-const eventImages = {
-  event1: [
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-    "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-    "https://images.unsplash.com/photo-1511578314322-379afb476865"
-  ],
-  event2: [
-    "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-    "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf"
-  ],
-  event3: [
-    "https://images.unsplash.com/photo-1511578314322-379afb476865",
-    "https://images.unsplash.com/photo-1532103054090-3491f1a05d0d"
-  ]
-};
-
-function openModal(eventKey) {
-  const modal = document.getElementById("eventModal");
-  const content = document.getElementById("modalContent");
-
-  content.innerHTML = "";
-
-  eventImages[eventKey].forEach(img => {
-    content.innerHTML += `<img src="${img}" />`;
-  });
-
-  modal.style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("eventModal").style.display = "none";
-}
-</script>
-
 <script>
 document.querySelectorAll('.dropdown-toggle').forEach(btn => {
   btn.addEventListener('click', function(e) {
@@ -192,6 +173,6 @@ document.querySelectorAll('.dropdown-toggle').forEach(btn => {
   });
 });
 </script>
-
+    
 </body>
 </html>

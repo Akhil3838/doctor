@@ -24,7 +24,15 @@
 
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle">About ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="academic.html">Academic Credentials</a></li>
+    <li><a href="journey.html">Global Leadership & Entrepreneurial Journey</a></li>
+    <li><a href="speaking.html">Global Conferences & Forums</a></li>
+  </ul>
+</li>
       <li><a href="/news-and-events.html">Projects</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -197,11 +205,27 @@
       <div class="card-desc">Driving enterprise blockchain strategy and digital transformation initiatives.</div>
     </div>
   </div>
-  <div class="tab-btns">
-    <button class="tab-btn">Academic Credentials</button>
-    <button class="tab-btn">Global Leadership &amp; Entrepreneurial Journey</button>
-    <button class="tab-btn">Speaking Engagements</button>
-  </div>
+<div class="container w-75 tab-btns" style="display:flex;">
+  <button 
+    style="
+      margin-left:auto;
+      padding:8px 26px;
+      font-size:14px;
+      color:#fff;
+      background: linear-gradient(135deg, rgb(15 26 48), rgb(26 49 95));
+      border:none;
+      border-radius:25px;
+      cursor:pointer;
+      transition:all 0.3s ease;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    "
+    onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.25)'"
+    onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'"
+  >
+    See more →
+  </button>
+</div></section>
+
 </section>
 
 <!-- PROJECTS -->
@@ -413,6 +437,25 @@
       nav.classList.remove("scrolled");
     }
   });
+</script>
+
+<script>
+document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+
+      const parent = this.parentElement;
+
+      // close other dropdowns (optional but clean UX)
+      document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== parent) d.classList.remove('active');
+      });
+
+      parent.classList.toggle('active');
+    }
+  });
+});
 </script>
 
 </body>

@@ -7,15 +7,14 @@
 
     <link rel="stylesheet" href="/css/style.css" />
 
-
 </head>
-<body>
+<body >
 
     
 <div style="padding-top: 80px;">
   <!-- NAV -->
   <nav style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000;">
-    <div class="nav-container">
+      <div class="nav-container">
       <div class="nav-logo">
         <img src="/images/sign.png" alt="Dr. Vin Menon Logo" />
       </div> 
@@ -44,43 +43,76 @@
   </nav>
   <!-- HERO -->
   
-  <!-- ABOUT -->
-   <section style="padding-top: 30px;">
-       <h2 class="section-title" style=" margin-bottom: 2px;">Gallery</h2>
-                  <p style="text-align: center; margin-bottom: 2px;">
-    A curated selection of our favorite moments. Each photograph is a story, a captured instant of beauty and wonder.
-  </p>
-   </section>
-      <!-- GALLERY -->
   
-  <div class="event-gallery">
+  <!-- academic credentials -->
+  <section class="academic-section">
+      <h2 class="section-title">Academic Credentials</h2>
   
-    <!-- EVENT CARD -->
-    <div class="event-card" onclick="openModal('event1')">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" />
-      <div class="event-overlay">
-        <h3>Tech Summit 2025</h3>
-        <p>March 12, 2025</p>
+    <div class="container">
+      <div class="timeline">
+  
+        <!-- ITEM 1 -->
+        <div class="timeline-item left">
+          <div class="content">
+            <span class="year">2019</span>
+            <h3>Doctor of Philosophy (Ph.D.)</h3>
+            <h5>Blockchain for Impact in Healthcare</h5>
+            <p>Leveraged blockchain technology to improve transparency, efficiency, and trust in healthcare systems.</p>
+            <small>Al-Farabi Kazakh National University, Kazakhstan</small>
+          </div>
+          <div class="timeline-img">
+            <img src="https://drvinmenon.com/images/phd-col.jpg">
+          </div>
+        </div>
+  
+        <!-- ITEM 2 -->
+        <div class="timeline-item right">
+          <div class="content">
+            <span class="year">2008–2010</span>
+            <h3>Executive Master’s in Business Administration (EMBA)</h3>
+            <h5>Strategic Management & Leadership</h5>
+            <p>Specialized in technology-driven enterprise development across the globe.</p>
+            <small>Nanyang Technological University, Singapore</small>
+          </div>
+          <div class="timeline-img">
+            <img src="https://drvinmenon.com/images/emba-col.webp">
+          </div>
+        </div>
+  
+        <!-- ITEM 3 -->
+        <div class="timeline-item left">
+          <div class="content">
+            <span class="year">2010</span>
+            <h3>Advanced Management Program</h3>
+            <h5>Innovation & Sustainable Leadership</h5>
+            <p>Concentrated on organizational transformation and sustainable business leadership.</p>
+            <small>HAAS School of Business, UC Berkeley, USA</small>
+          </div>
+          <div class="timeline-img">
+            <img src="https://drvinmenon.com/images/amp-col-1.jpg">
+          </div>
+        </div>
+  
+        <!-- ITEM 4 -->
+        <div class="timeline-item right">
+          <div class="content">
+            <span class="year">2009</span>
+            <h3>Advanced Management Program</h3>
+            <h5>Global Finance & Corporate Governance</h5>
+            <p>Focused on strategic decision-making for emerging and high-growth markets.</p>
+            <small>Wharton Business School, University of Pennsylvania, USA</small>
+          </div>
+          <div class="timeline-img">
+            <img src="https://drvinmenon.com/images/amp-col-2.avif">
+          </div>
+        </div>
+  
       </div>
     </div>
+  </section>
   
-    <div class="event-card" onclick="openModal('event2')">
-      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" />
-      <div class="event-overlay">
-        <h3>Global Meetup</h3>
-        <p>June 8, 2025</p>
-      </div>
-    </div>
   
-    <div class="event-card" onclick="openModal('event3')">
-      <img src="https://images.unsplash.com/photo-1511578314322-379afb476865" />
-      <div class="event-overlay">
-        <h3>Startup Expo</h3>
-        <p>Sept 21, 2025</p>
-      </div>
-    </div>
   
-  </div>
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
@@ -128,52 +160,7 @@
     </div>
     <div class="footer-copy">© 2026 Dr. Vin Menon. All rights reserved.</div>
   </footer>
-</div style="padding-top: 80px;">
-
-<!-- MODAL -->
-<div id="eventModal" class="modal" style="margin-top: 50px;">
-  <span class="close" onclick="closeModal()">&times;</span>
-
-  <div class="modal-content" id="modalContent">
-    <!-- Images will come here dynamically -->
-  </div>
 </div>
-
-    <script>
-const eventImages = {
-  event1: [
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-    "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-    "https://images.unsplash.com/photo-1511578314322-379afb476865"
-  ],
-  event2: [
-    "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-    "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf"
-  ],
-  event3: [
-    "https://images.unsplash.com/photo-1511578314322-379afb476865",
-    "https://images.unsplash.com/photo-1532103054090-3491f1a05d0d"
-  ]
-};
-
-function openModal(eventKey) {
-  const modal = document.getElementById("eventModal");
-  const content = document.getElementById("modalContent");
-
-  content.innerHTML = "";
-
-  eventImages[eventKey].forEach(img => {
-    content.innerHTML += `<img src="${img}" />`;
-  });
-
-  modal.style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("eventModal").style.display = "none";
-}
-</script>
-
 <script>
 document.querySelectorAll('.dropdown-toggle').forEach(btn => {
   btn.addEventListener('click', function(e) {
@@ -192,6 +179,6 @@ document.querySelectorAll('.dropdown-toggle').forEach(btn => {
   });
 });
 </script>
-
+    
 </body>
 </html>
