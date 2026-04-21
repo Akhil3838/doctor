@@ -1,5 +1,6 @@
 (function ($) {
   $(function () {
+
     // Navbar scroll effect
     var $nav = $('nav');
     if ($nav.length) {
@@ -24,7 +25,20 @@
       }
     });
 
-    // Gallery modal behavior
+    // ================= CARD CAROUSEL (jQuery version) =================
+    $('.card-carousel').each(function () {
+      var $carousel = $(this);
+      var $images = $carousel.find('img');
+      var index = 0;
+
+      setInterval(function () {
+        $images.eq(index).removeClass('active');
+        index = (index + 1) % $images.length;
+        $images.eq(index).addClass('active');
+      }, 2500);
+    });
+
+    // ================= GALLERY MODAL =================
     var eventImages = {
       event1: [
         'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
@@ -47,7 +61,7 @@
         var $content = $('#modalContent').empty();
         var images = eventImages[eventKey] || [];
 
-        images.forEach(function (src) {
+        $.each(images, function (i, src) {
           $('<img>').attr('src', src).appendTo($content);
         });
 
@@ -64,5 +78,6 @@
         }
       });
     }
+
   });
 })(jQuery);
